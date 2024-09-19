@@ -1,25 +1,5 @@
 import { 
-    Client, 
-    GatewayIntentBits, 
-    Partials, 
-    EmbedBuilder, 
-    ButtonBuilder, 
-    ButtonStyle, 
-    ActionRowBuilder, 
-    ModalBuilder, 
-    TextInputBuilder, 
-    TextInputStyle, 
-    REST, 
-    Routes, 
-    Events, 
-    DefaultWebSocketManagerOptions, 
-    TextChannel, 
-    CommandInteraction, 
-    ActivityType, 
-    PermissionsBitField,
-    VoiceChannel,
-    channelMention,
-    channelLink,
+    Client,
     MessageEmbed
 } from 'discord.js-selfbot-v13';
 import { messageCreate } from './events/messageCreate.js'
@@ -30,5 +10,5 @@ client.on('ready', async () => {
     console.log(`${client.user.username} is ready!`);
 })
 
-client.on('messageCreate', async message => messageCreate(message));
+client.on('messageCreate', async message => messageCreate(client, message));
 client.login(token);

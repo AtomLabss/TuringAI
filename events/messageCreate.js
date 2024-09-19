@@ -1,29 +1,9 @@
 import { 
-    Client, 
-    GatewayIntentBits, 
-    Partials, 
-    EmbedBuilder, 
-    ButtonBuilder, 
-    ButtonStyle, 
-    ActionRowBuilder, 
-    ModalBuilder, 
-    TextInputBuilder, 
-    TextInputStyle, 
-    REST, 
-    Routes, 
-    Events, 
-    DefaultWebSocketManagerOptions, 
-    TextChannel, 
-    CommandInteraction, 
-    ActivityType, 
-    PermissionsBitField,
-    VoiceChannel,
-    channelMention,
-    channelLink,
+    Client,
     MessageEmbed
 } from 'discord.js-selfbot-v13';
 
-export async function messageCreate(message) {
+export async function messageCreate(client, message) {
     if (message.author.bot) return;
     if (message.author.id === client.user.id) return;
 
