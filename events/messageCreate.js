@@ -22,13 +22,10 @@ import {
     channelLink,
     MessageEmbed
 } from 'discord.js-selfbot-v13';
-import { messageCreate } from './events/messageCreate.js'
-const token = "<your-token-here>";
-const client = new Client();
 
-client.on('ready', async () => {
-    console.log(`${client.user.username} is ready!`);
-})
+export async function messageCreate(message) {
+    if (message.author.bot) return;
+    if (message.author.id === client.user.id) return;
 
-client.on('messageCreate', async message => messageCreate(message));
-client.login(token);
+    message.reply(`hello world`);
+}
