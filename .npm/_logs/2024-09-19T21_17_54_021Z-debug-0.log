@@ -1,0 +1,130 @@
+0 verbose cli /usr/local/bin/node /usr/local/bin/npm
+1 info using npm@10.8.3
+2 info using node@v21.7.3
+3 silly config load:file:/usr/local/lib/node_modules/npm/npmrc
+4 silly config load:file:/home/container/.npmrc
+5 silly config load:file:/usr/local/etc/npmrc
+6 verbose title npm install discord.js-selfbot-v13 groq-sdk ffmpeg opusscript
+7 verbose argv "install" "discord.js-selfbot-v13" "groq-sdk" "ffmpeg" "opusscript"
+8 verbose logfile logs-max:10 dir:/home/container/.npm/_logs/2024-09-19T21_17_54_021Z-
+9 verbose logfile /home/container/.npm/_logs/2024-09-19T21_17_54_021Z-debug-0.log
+10 silly packumentCache heap:614203392 maxSize:153550848 maxEntrySize:76775424
+11 silly logfile start cleaning logs, removing 1 files
+12 silly logfile done cleaning log files
+13 silly idealTree buildDeps
+14 silly fetch manifest discord.js-selfbot-v13@^3.4.0
+15 silly packumentCache full:https://registry.npmjs.org/discord.js-selfbot-v13 cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/discord.js-selfbot-v13 28ms (cache hit)
+17 silly packumentCache full:https://registry.npmjs.org/discord.js-selfbot-v13 set size:998040 disposed:false
+18 silly fetch manifest ffmpeg@^0.0.4
+19 silly packumentCache full:https://registry.npmjs.org/ffmpeg cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/ffmpeg 3ms (cache hit)
+21 silly packumentCache full:https://registry.npmjs.org/ffmpeg set size:28048 disposed:false
+22 silly fetch manifest groq-sdk@^0.7.0
+23 silly packumentCache full:https://registry.npmjs.org/groq-sdk cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/groq-sdk 2ms (cache hit)
+25 silly packumentCache full:https://registry.npmjs.org/groq-sdk set size:172980 disposed:false
+26 silly fetch manifest opusscript@^0.0.8
+27 silly packumentCache full:https://registry.npmjs.org/opusscript cache-miss
+28 http fetch GET 200 https://registry.npmjs.org/opusscript 2ms (cache hit)
+29 silly packumentCache full:https://registry.npmjs.org/opusscript set size:17409 disposed:false
+30 silly placeDep ROOT discord.js-selfbot-v13@3.4.0 REPLACE for:  want: ^3.4.0
+31 silly placeDep ROOT ffmpeg@0.0.4 REPLACE for:  want: ^0.0.4
+32 silly placeDep ROOT groq-sdk@0.7.0 REPLACE for:  want: ^0.7.0
+33 silly placeDep ROOT opusscript@0.0.8 REPLACE for:  want: ^0.0.8
+34 silly reify moves {}
+35 silly audit bulk request {
+35 silly audit   '@discordjs/builders': [ '1.9.0' ],
+35 silly audit   '@sapphire/shapeshift': [ '4.0.0', '3.9.7' ],
+35 silly audit   'discord-api-types': [ '0.37.97', '0.37.100' ],
+35 silly audit   '@discordjs/collection': [ '1.5.3' ],
+35 silly audit   '@discordjs/formatters': [ '0.5.0' ],
+35 silly audit   '@discordjs/util': [ '1.1.1' ],
+35 silly audit   '@sapphire/async-queue': [ '1.5.3' ],
+35 silly audit   '@types/node': [ '18.19.50' ],
+35 silly audit   '@types/node-fetch': [ '2.6.11' ],
+35 silly audit   'abort-controller': [ '3.0.0' ],
+35 silly audit   agentkeepalive: [ '4.5.0' ],
+35 silly audit   'ansi-regex': [ '5.0.1' ],
+35 silly audit   'ansi-styles': [ '4.3.0' ],
+35 silly audit   asynckit: [ '0.4.0' ],
+35 silly audit   camelcase: [ '5.3.1' ],
+35 silly audit   chalk: [ '4.1.2' ],
+35 silly audit   cliui: [ '6.0.0' ],
+35 silly audit   'color-convert': [ '2.0.1' ],
+35 silly audit   'color-name': [ '1.1.4' ],
+35 silly audit   'combined-stream': [ '1.0.8' ],
+35 silly audit   commander: [ '5.1.0' ],
+35 silly audit   debug: [ '4.3.7' ],
+35 silly audit   decamelize: [ '1.2.0' ],
+35 silly audit   'delayed-stream': [ '1.0.0' ],
+35 silly audit   dijkstrajs: [ '1.0.3' ],
+35 silly audit   'emoji-regex': [ '8.0.0' ],
+35 silly audit   'event-target-shim': [ '5.0.1' ],
+35 silly audit   'fast-deep-equal': [ '3.1.3' ],
+35 silly audit   'fetch-cookie': [ '2.2.0' ],
+35 silly audit   'find-process': [ '1.4.7' ],
+35 silly audit   'find-up': [ '4.1.0' ],
+35 silly audit   'form-data': [ '4.0.0' ],
+35 silly audit   'form-data-encoder': [ '1.7.2' ],
+35 silly audit   'formdata-node': [ '4.4.1' ],
+35 silly audit   'get-caller-file': [ '2.0.5' ],
+35 silly audit   'has-flag': [ '4.0.0' ],
+35 silly audit   'humanize-ms': [ '1.2.1' ],
+35 silly audit   'is-fullwidth-code-point': [ '3.0.0' ],
+35 silly audit   'locate-path': [ '5.0.0' ],
+35 silly audit   lodash: [ '4.17.21' ],
+35 silly audit   'mime-db': [ '1.52.0' ],
+35 silly audit   'mime-types': [ '2.1.35' ],
+35 silly audit   ms: [ '2.1.3' ],
+35 silly audit   'node-domexception': [ '1.0.0' ],
+35 silly audit   'node-fetch': [ '2.7.0' ],
+35 silly audit   'p-limit': [ '2.3.0' ],
+35 silly audit   'p-locate': [ '4.1.0' ],
+35 silly audit   'p-try': [ '2.2.0' ],
+35 silly audit   'path-exists': [ '4.0.0' ],
+35 silly audit   pngjs: [ '5.0.0' ],
+35 silly audit   'prism-media': [ '1.3.5' ],
+35 silly audit   psl: [ '1.9.0' ],
+35 silly audit   punycode: [ '2.3.1' ],
+35 silly audit   qrcode: [ '1.5.4' ],
+35 silly audit   querystringify: [ '2.2.0' ],
+35 silly audit   'require-directory': [ '2.1.1' ],
+35 silly audit   'require-main-filename': [ '2.0.0' ],
+35 silly audit   'requires-port': [ '1.0.0' ],
+35 silly audit   'set-blocking': [ '2.0.0' ],
+35 silly audit   'set-cookie-parser': [ '2.7.0' ],
+35 silly audit   'string-width': [ '4.2.3' ],
+35 silly audit   'strip-ansi': [ '6.0.1' ],
+35 silly audit   'supports-color': [ '7.2.0' ],
+35 silly audit   'tough-cookie': [ '4.1.4' ],
+35 silly audit   tr46: [ '0.0.3' ],
+35 silly audit   'tree-kill': [ '1.2.2' ],
+35 silly audit   'ts-mixer': [ '6.0.4' ],
+35 silly audit   tslib: [ '2.7.0' ],
+35 silly audit   'undici-types': [ '5.26.5' ],
+35 silly audit   universalify: [ '0.2.0' ],
+35 silly audit   'url-parse': [ '1.5.10' ],
+35 silly audit   'web-streams-polyfill': [ '4.0.0-beta.3' ],
+35 silly audit   'webidl-conversions': [ '3.0.1' ],
+35 silly audit   'whatwg-url': [ '5.0.0' ],
+35 silly audit   when: [ '3.7.8' ],
+35 silly audit   'which-module': [ '2.0.1' ],
+35 silly audit   'wrap-ansi': [ '6.2.0' ],
+35 silly audit   ws: [ '8.18.0' ],
+35 silly audit   y18n: [ '4.0.3' ],
+35 silly audit   yargs: [ '15.4.1' ],
+35 silly audit   'yargs-parser': [ '18.1.3' ],
+35 silly audit   'discord.js-selfbot-v13': [ '3.4.0' ],
+35 silly audit   ffmpeg: [ '0.0.4' ],
+35 silly audit   'groq-sdk': [ '0.7.0' ],
+35 silly audit   opusscript: [ '0.0.8' ]
+35 silly audit }
+36 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 317ms
+37 silly audit report {}
+38 verbose cwd /home/container
+39 verbose os Linux 6.8.0-44-generic
+40 verbose node v21.7.3
+41 verbose npm  v10.8.3
+42 verbose exit 0
+43 info ok

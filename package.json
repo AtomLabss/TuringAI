@@ -1,6 +1,8 @@
 {
-    "dependencies": {
-      "discord.js-selfbot-v13": "^3.4.0"
-    },
-    "type": "module"
-}  
+  "dependencies": {
+      "discord.js-selfbot-v13": "^3.4.0",
+      "dotenv": "^16.4.5",
+      "groq-sdk": "^0.7.0"
+  },
+  "type": "module"
+}
