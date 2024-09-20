@@ -45,18 +45,18 @@ Stay tuned!
 
 # Installation
 - Clone TuringAI:
-```
+```bash
 git clone https://github.com/AtomLabss/TuringAI
 cd TuringAI
 ```
 
 - Install the required dependancies:
-```
+```bash
 npm install discord.js-selfbot-v13 groq-sdk dotenv
 ```
 
 - Configure your .env file:
-```
+```env
 # TuringAI configuration
 # This is the configuration file for TuringAI. You can change the values here to customize the bot to your liking.
 
@@ -73,7 +73,7 @@ PREFIX=turing! # TuringAI prefix
 
 - It's as easy as cake! (probably)
 
-```
+```bash
 cd TuringAI
 nodejs ./turing.js
 ```
