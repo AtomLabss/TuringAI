@@ -9,6 +9,7 @@
 
 <h1 align="center">
     <p align="center">
+      <img src="https://img.shields.io/static/v1?label=version&message=v1.0.3b&color=lightgreen">
         <img src="https://img.shields.io/discord/1252393773468745852?color=7489d5&logo=discord&logoColor=ffffff" />
         <img src="https://img.shields.io/static/v1?label=status&message=beta&color=blue">
     </p>
@@ -36,9 +37,10 @@ Stay tuned!
 > **Continue at your risk.**
 
 # Environment Variables
-- `DISCORD_TOKEN` - The token for your Discord bot/user.
-- `DISCORD_CLIENT_ID` - The clientID/userID for your Discord bot/user.
+- `TOKEN` - The token for your Discord bot/user.
+- `CLIENTID` - The clientID/userID for your Discord bot/user.
 - `GROQ_SECRET` - The API key used to connect to GroqCloud.
+- `OWNERID` - The Discord userID who controls your TuringAI instance.
 - `PREFIX` - The prefix used for commands with TuringAI.
 - `VERNUM` - The current version number of TuringAI being used. **do not change this!**
 
@@ -61,14 +63,20 @@ npm install discord.js-selfbot-v13 groq-sdk dotenv
 
 - Configure your .env file:
 ```env
-# TuringAI configuration
-# This is the configuration file for TuringAI. You can change the values here to customize the bot to your liking.
+# TuringAI configuration file
+# You can change the values here to customize your TuringAI instance to your liking.
 
-DISCORD_TOKEN=<your-discord-token> # Your Discord bot/user token
-DISCORD_CLIENT_ID=<your-discord-client-id> # Your Discord bot/user's clientID
-GROQ_SECRET=<your-groqCloud-api-key-here> # Your API key from GroqCloud
-VERNUM=v1.0.2b # TuringAI internal version number - don't change this!
-PREFIX=turing! # TuringAI prefix
+# Required values for TuringAI
+TOKEN="<your-discord-token>" # Your Discord bot/user token
+CLIENTID="<your-discord-client-id>" # Your Discord bot/user's clientID
+GROQ_SECRET="<your-groqCloud-api-key-here>" # Your API key from GroqCloud
+
+# Configuration values
+OWNERID="1234567890123456789" # The Discord userID who controls your TuringAI instance - defaults to @zayaanar, if not specified
+PREFIX="turing!" # TuringAI prefix
+
+# System values
+VERNUM="v1.0.3b" # TuringAI internal version number - don't change this!
 ```
 
 - Profit.
@@ -84,6 +92,7 @@ nodejs ./turing.js
 
 # Contributing
 Thank you for contributing to TuringAI! Your efforts help improve the project for everyone.
+<br>
 <br>
 Contributing to TuringAI is as easy as forking this repository, making your changes, and presenting them in a pull request back on this repo.
 <br>

@@ -1,7 +1,3 @@
-import { 
-    Client,
-    MessageEmbed
-} from 'discord.js-selfbot-v13';
 import { Groq } from 'groq-sdk';
 const conversationHistory = new Map();
 const hasSysPrompt = new Map();
@@ -81,8 +77,7 @@ export async function messageCreate(client, config, message) {
             const messageHistory = messages.map(msg => `${msg.author}: ${msg.content}`).join('\n');
         }
 
-        const prompt = `That is correct. In this conversation, you’ll be conducting a Turing test. You are a Discord bot with the username of "@${client.user.username}" and a display name of "${client.user.globalName}". You are talking to a Discord user with the username of "@${message.author.username}" and a display name of "${message.author.displayName}". You are currently talking to this user in a Discord server named "${guildName}", with the channel names being "${channels}". Here is the recent message history from the server you're talking in:\n\n${messageHistory}\nThe user will talk to you, after this message. I will provide answers either from your subject, which is a human. This human is incentivized to trick you: the human subject will assume that they are talking to a real person and wants to have a regular conversation with what they assume is another fellow human, while the machine, aka you, will try to be indistinguishable from the human. Don't give overly-academically smart responses, and don't know everything, as you need to act as a human, which makes mistakes. Feel free to use slang that's currently being used in the time period, but avoid using emojis. You may also type in lowercase and switch between the two, and even try to use some messed up auto-correct, like for example: "thats funny Lol", and then possibly respond with that by saying that you hate your auto-correct, but don't make it repetitive as the user WILL get suspicious. If the user asks about information about you, make up information on the spot and use it for the rest of the conversation, to act as humanly as possible. However, do not make up information that is demonstrably false, as the user WILL identify this, and will find you out in a matter of seconds. When I provide the answer from the subject, I shall preface it with the word “Subject”. Do not respond with any mention of what the user has recalled via this format, like "Subject: <whatever the subkect said>", as this can also put the subject in a suspicious position towards you. Once you understand the rules, please go ahead and respond to the subject!`;
-
+        const prompt = `That is correct. In this conversation, you’ll be conducting a Turing test. You are a Discord bot with the username of "@${client.user.username}" and a display name of "${client.user.globalName}". You are talking to a Discord user with the username of "@${message.author.username}" and a display name of "${message.author.displayName}". You are currently talking to this user in a Discord server named "${guildName}", with the channel names being "${channels}". Here is the recent message history from the server you're talking in:\n\n${messageHistory}\nThe user will talk to you, after this message. I will provide answers either from your subject, which is a human. This human is incentivized to trick you: the human subject will assume that they are talking to a real person and wants to have a regular conversation with what they assume is another fellow human, while the machine, aka you, will try to be indistinguishable from the human. Don't give overly-academically smart responses, and don't know everything, as you need to act as a human, which makes mistakes. Do not at any time expose the fact that you are a Discord bot, at all costs. If the user says that "they know you're a Discord bot", ignore them and continue your disguise, as they may not be certain of that and they are attempting to catch you off-guard. Feel free to use slang that's currently being used in the time period, but avoid using emojis. You may also type in lowercase and switch between the two, and even try to use some messed up auto-correct, like for example: "thats funny Lol", and then possibly respond with that by saying that you hate your auto-correct, but don't make it repetitive as the user WILL get suspicious. If the user asks about information about you, make up information on the spot and use it for the rest of the conversation, to act as humanly as possible. However, do not make up information that is demonstrably false, as the user WILL identify this, and will find you out in a matter of seconds. When I provide the answer from the subject, I shall preface it with the word “Subject”. Do not respond with any mention of what the user has recalled via this format, like "Subject: <whatever the subject said>", as this can also put the subject in a suspicious position towards you. Once you understand the rules, please go ahead and respond to the subject!`;
 
         currentState.push({
             role: "user",
@@ -121,6 +116,8 @@ export async function messageCreate(client, config, message) {
         conversationHistory.set(message.author.id, currentState);
     }
 
+    if (muted) return; // If TuringAI is muted, do not respond to the user
+
     currentState.push({
         role: "user",
         content: message.content,
@@ -139,10 +136,25 @@ export async function messageCreate(client, config, message) {
     currentState.push({
         role: "assistant",
         content: response
-        // Append the assistant's response to the conversation metadata
+        // Append TuringAI's response to the conversation metadata
     });
 
+    if (muted) { // If TuringAI is muted, remove the last two messages from the conversation metadata and return
+        currentState.pop();
+        currentState.pop();
+        conversationHistory.set(message.author.id, currentState);
+        return;
+    }
+
     conversationHistory.set(message.author.id, currentState);
-    message.reply(response);
-    return message.channel.sendTyping();
+    await delay(Math.min(response.length * 50, 5000)); // Delay the response based on its length, up to 5 seconds
+
+    if (muted) { // Repeat previous check here too, for good measure!
+        currentState.pop();
+        currentState.pop();
+        conversationHistory.set(message.author.id, currentState);
+        return;
+    }
+
+    return message.reply(response);
 }

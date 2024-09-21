@@ -23,11 +23,14 @@ console.log("Re-assigning system metadata, please wait...");
 dotenv.config();
 
 const config = {
-    token: process.env.DISCORD_TOKEN,
-    clientID: process.env.DISCORD_CLIENT_ID,
+    token: process.env.TOKEN,
+    clientID: process.env.CLIENTID,
     groqSecret: process.env.GROQ_SECRET,
-    verNum: process.env.VERNUM,
+    //
+    ownerID: process.env.OWNERID,
     prefix: process.env.PREFIX,
+    //
+    verNum: process.env.VERNUM,
 }
 
 console.log("Successfully re-assigned system metadata.");
