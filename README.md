@@ -21,6 +21,7 @@ TuringAI is a Discord bot/self-bot that is designed to mimic an average human be
 <br>
 TuringAI utilizes `discord.js-selfbot-v13` to get this look, however support for `discord.js` is in the works too!
 <br>
+<br>
 Stay tuned!
 
 # Prerequisites
@@ -35,26 +36,28 @@ Stay tuned!
 > **Continue at your risk.**
 
 # Environment Variables
+```
 - **DISCORD_TOKEN**: The token for your Discord bot/user.
 - **DISCORD_CLIENT_ID**: The clientID/userID for your Discord bot/user.
 - **GROQ_SECRET**: The API key used to connect to GroqCloud.
 - **PREFIX**: The prefix used for commands with TuringAI.
 - **VERNUM**: The current version number of TuringAI being used. **do not change this!**
+```
 
 <br>
 
 > [!TIP]
-> **It is optional to add a clientID at this moment in time, but this may change with new releases.**
+> **It is optional to add a clientID currently, but this may change with new releases.**
 
 # Installation
 - Clone TuringAI:
-```bash
+```shell
 git clone https://github.com/AtomLabss/TuringAI
 cd TuringAI
 ```
 
 - Install the required dependancies:
-```bash
+```shell
 npm install discord.js-selfbot-v13 groq-sdk dotenv
 ```
 
@@ -76,7 +79,7 @@ PREFIX=turing! # TuringAI prefix
 
 - It's as easy as cake! (probably)
 
-```bash
+```shell
 cd TuringAI
 nodejs ./turing.js
 ```
