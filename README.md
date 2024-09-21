@@ -13,6 +13,8 @@
     </p>
 </h1>
 
+<br>
+
 # Overview
 TuringAI is a Discord bot/self-bot that is designed to mimic an average human being on Discord as realistically as possible.
 <br>
