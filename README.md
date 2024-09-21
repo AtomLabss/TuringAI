@@ -36,13 +36,11 @@ Stay tuned!
 > **Continue at your risk.**
 
 # Environment Variables
-```
-- **DISCORD_TOKEN**: The token for your Discord bot/user.
-- **DISCORD_CLIENT_ID**: The clientID/userID for your Discord bot/user.
-- **GROQ_SECRET**: The API key used to connect to GroqCloud.
-- **PREFIX**: The prefix used for commands with TuringAI.
-- **VERNUM**: The current version number of TuringAI being used. **do not change this!**
-```
+- `DISCORD_TOKEN`: The token for your Discord bot/user.
+- `DISCORD_CLIENT_ID`: The clientID/userID for your Discord bot/user.
+- `GROQ_SECRET`: The API key used to connect to GroqCloud.
+- `PREFIX`: The prefix used for commands with TuringAI.
+- `VERNUM`: The current version number of TuringAI being used. **do not change this!**
 
 <br>
 
