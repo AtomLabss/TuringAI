@@ -9,7 +9,7 @@
 
 <h1 align="center">
     <p align="center">
-      <img src="https://img.shields.io/static/v1?label=version&message=v1.0.3b&color=lightgreen">
+      <img src="https://img.shields.io/static/v1?label=version&message=v1.0.3b&color=green">
         <img src="https://img.shields.io/discord/1252393773468745852?color=7489d5&logo=discord&logoColor=ffffff" />
         <img src="https://img.shields.io/static/v1?label=status&message=beta&color=blue">
     </p>
