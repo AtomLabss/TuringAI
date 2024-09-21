@@ -20,8 +20,7 @@
 # Overview
 TuringAI is a Discord bot/self-bot that is designed to mimic an average human being on Discord as realistically as possible.
 <br>
-TuringAI utilizes `discord.js-selfbot-v13` to get this look, however support for `discord.js` is in the works too!
-<br>
+TuringAI utilizes `discord.js-selfbot-v13` to achieve this, however `discord.js` compatibility is in the works too!
 <br>
 Stay tuned!
 
