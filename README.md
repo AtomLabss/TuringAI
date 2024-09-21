@@ -72,7 +72,7 @@ CLIENTID="<your-discord-client-id>" # Your Discord bot/user's clientID
 GROQ_SECRET="<your-groqCloud-api-key-here>" # Your API key from GroqCloud
 
 # Configuration values
-OWNERID="1234567890123456789" # The Discord userID who controls your TuringAI instance - defaults to @zayaanar, if not specified
+OWNERID="1234567890123456789" # The Discord userID which controls your TuringAI instance
 PREFIX="turing!" # TuringAI prefix
 
 # System values
