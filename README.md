@@ -40,7 +40,7 @@ Stay tuned!
 - `TOKEN` - The token for your Discord bot/user.
 - `CLIENTID` - The clientID/userID for your Discord bot/user.
 - `GROQ_SECRET` - The API key used to connect to GroqCloud.
-- `OWNERID` - The Discord userID who controls your TuringAI instance.
+- `OWNERID` - The Discord userID which controls your TuringAI instance.
 - `PREFIX` - The prefix used for commands with TuringAI.
 - `VERNUM` - The current version number of TuringAI being used. **do not change this!**
 
