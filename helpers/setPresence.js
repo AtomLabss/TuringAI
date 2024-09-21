@@ -8,7 +8,7 @@ import {
 } from 'discord.js-selfbot-v13';
 
 export async function setPresence(client, config, type) {
-    const presenceNum = Math.floor(Math.random() * 3) + 1;
+    const presenceNum = Math.floor(Math.random() * 4) + 1;
     const platformNum = Math.floor(Math.random() * 2) + 1;
     const onlineStatusNum = Math.floor(Math.random() * 3) + 1;
     let platform;
@@ -89,6 +89,23 @@ export async function setPresence(client, config, type) {
             .addButton('Send Invite', 'https://github.com/AtomLabss/TuringAI');
 
         custom = new CustomStatus(client).setState('Playing Forza Horizon 4');
+    } else if (presenceNum === 4) {
+        const getExtendURL = await RichPresence.getExternal(
+            client,
+            '367827983903490050',
+            'https://icon-library.com/images/minecraft-logo-icon/minecraft-logo-icon-9.jpg'
+        );
+
+        status = new RichPresence(client)
+            .setApplicationId('367827983903490050')
+            .setType('PLAYING')
+            .setName('Minecraft')
+            .setStartTimestamp(0)
+            .setAssetsLargeImage(getExtendURL[0].external_asset_path)
+            .setAssetsLargeText(`TuringAI ${config.verNum}`)
+            .setPlatform(platform)
+
+        custom = new CustomStatus(client).setState('Playing Minecraft');
     }
 
     if (platformNum === 1) {
