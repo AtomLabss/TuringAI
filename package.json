@@ -5,7 +5,7 @@
       "groq-sdk": "^0.7.0"
   },
   "scripts" : {
-    "test" : "echo hello world!"; true"
+    "test" : "echo 'Success: probably lol'; true"
   },
   "type": "module"
 }
