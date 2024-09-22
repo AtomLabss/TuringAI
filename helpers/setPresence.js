@@ -93,7 +93,7 @@ export async function setPresence(client, config, type) {
         const getExtendURL = await RichPresence.getExternal(
             client,
             '367827983903490050',
-            'https://icon-library.com/images/minecraft-logo-icon/minecraft-logo-icon-9.jpg'
+            'https://github.com/AtomLabss/TuringAI/blob/main/assets/minecraft.png?raw=true'
         );
 
         status = new RichPresence(client)
