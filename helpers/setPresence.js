@@ -23,7 +23,7 @@ export async function setPresence(client, config, type) {
         const getExtendURL = await RichPresence.getExternal(
             client,
             '367827983903490050',
-            'https://static.wikia.nocookie.net/logopedia/images/7/79/R6S_old_icon.png/revision/latest/scale-to-width-down/250?cb=20211214004315'
+            'https://github.com/AtomLabss/TuringAI/blob/main/assets/images/presence/rainbowsixsiege_launch.webp?raw=true'
         );
 
         if (gameMode === 1) {
@@ -57,7 +57,7 @@ export async function setPresence(client, config, type) {
         const getExtendURL = await RichPresence.getExternal(
             client,
             '367827983903490050',
-            'https://static.wikia.nocookie.net/robloxcities/images/d/d2/RobloxLogo.png/revision/latest/scale-to-width-down/1024?cb=20230125021936'
+            'https://github.com/AtomLabss/TuringAI/blob/main/assets/images/presence/roblox.webp?raw=true'
         );
 
         status = new RichPresence(client)
@@ -75,7 +75,7 @@ export async function setPresence(client, config, type) {
         const getExtendURL = await RichPresence.getExternal(
             client,
             '367827983903490050',
-            'https://pngimg.com/d/xbox_PNG17529.png'
+            'https://github.com/AtomLabss/TuringAI/blob/main/assets/images/presence/xbox_legacy.png?raw=true'
         );
 
         status = new RichPresence(client)
