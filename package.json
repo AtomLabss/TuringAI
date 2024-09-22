@@ -6,6 +6,6 @@
   },
   "scripts" : {
     "test" : "echo 'Error: hello world'; false"
-  }
+  },
   "type": "module"
 }
